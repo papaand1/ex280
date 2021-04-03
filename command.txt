@@ -1,1 +1,3 @@
 oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:6443
+oc new-project review-troubleshoot
+oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
