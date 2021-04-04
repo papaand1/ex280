@@ -1,0 +1,5 @@
+RHT_OCP4_MODE=administration
+RHT_OCP4_MASTER_API=https://api.ocp4.example.com:6443
+RHT_OCP4_CLUSTER_ID=
+RHT_OCP4_WILDCARD_DOMAIN=apps.ocp4.example.com
+RHT_OCP4_KUBEADM_PASSWORD=

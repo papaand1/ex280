@@ -1,3 +1,242 @@
 oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:6443
 oc new-project review-troubleshoot
 oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+oc expose service hello-world-nginx --hostname hello-world.apps.ocp4.example.com
+curl  hello-world.apps.ocp4.example.com
+    1  exit
+    2  ssh lab@utility
+    3  sudo shutdown -h now
+    4  ls
+    5  ssh lab@utility
+    6  ls
+    7  sudo su -
+    8  exit
+    9  history 
+   10  lab review-troubleshoot start
+   11  oc login -u kubeadmin -p ${}
+   12  oc login -u kubeadmin -p ${} https://api.ocp.example.com:6443
+   13  cat /usr/local/etc/ocp4.config 
+   14  oc login -u kubeadmin -p ${RHT_OCP4_USER_PASSWD} https://api.ocp.example.com:6443
+   15  oc login -u kubeadmin -p ${RHT_OCP4_USER_PASSWD} https://api.ocp4.example.com:6443
+   16  SUDO -I
+   17  sudo -i
+   18  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:6443
+   19  oc login -u kubeadmin -p ${RHT_OCP4_KUBEADM_PASSWD} https://api.ocp4.example.com:8443
+   20  cat /usr/local/etc/ocp4.config 
+   21  oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:8443
+   22  oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:6443
+   23  oc project
+   24  oc projects
+   25  ping googlle.com
+   26  mkdir  ex280
+   27  cd ex280
+   28  git clone https://github.com/papaand1/ex280.git
+   29  ls
+   30  cd ex280/
+   31  ll
+   32  git status
+   33  echo "oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:6443" >> command.txt
+   34  git add command.txt 
+   35  git commit -m "test"
+   36  git push
+   37  ls
+   38  git push
+   39  vim command.txt 
+   40  oc new-project review-troubleshoot
+   41  echo "oc new-project review-troubleshoot" >> command.txt 
+   42  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+   43  oc     get pods
+   44  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+   45  echo "oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx" >> command.txt 
+   46  cd; oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+   47  locate hello-world-nginx
+   48  cd; oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps 
+   49  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps 
+   50  git push
+   51  cd ex280/ex280/.git/
+   52  cd ..
+   53  oc     get pods
+   54  git push
+   55  git add command.txt 
+   56  git commit -m "test"
+   57  git push
+   58  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps 
+   59  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --code-detection=false
+   60  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps 
+   61  cd
+   62  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps 
+   63  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --ignore-unknown-parameters 
+   64  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dirhello-world-nginx
+   65  oc new-app --name hello-world-nginx --as-deployment-config hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+   66  oc new-app --name hello-world-nginx https://github.com/RedHatTraining/DO280-apps --context-dir hello-world-nginx
+   67  oc get pods
+   68  oc get nodddes
+   69  oc get nodes
+   70  oc describe nodes master01
+   71  oc describe nodes master01 | grep taint
+   72  oc describe nodes master01 | grep -i taint
+   73  oc   get pods
+   74  oc get svc
+   75  oc get route
+   76  oc expose service hello-world-nginx --hostname hello-world.apps.ocp4.example.com
+   77  oc get route
+   78  curl  hello-world.apps.ocp4.example.com
+   79  echo "oc expose service hello-world-nginx --hostname hello-world.apps.ocp4.example.com" >> ex280/ex280/command.txt 
+   80  echo "curl  hello-world.apps.ocp4.example.com" >> ex280/ex280/command.txt 
+   81  touch cluster-users
+   82  for i in admin leader developer qa-engineer ; do htpasswd -B -b cluster-users $i review; ;done
+   83  for i in admin leader developer qa-engineer ; do htpasswd -B -b cluster-users $i revdone
+   84  for i in admin leader developer qa-engineer ; do htpasswd -B -b cluster-users $i review; done
+   85  cat          cluster-users 
+   86  oc create secret generic comreview-user --from-file htpasswd=cluster-users -n openshift-config
+   87  ls
+   88  oc get oauth cluster -o yaml > oauth.yaml
+   89  vim oauth.yaml 
+   90  oc replace -f oauth.yaml 
+   91  oc login -u admin -p review https://api.ocp4.example.com:6443
+   92  for i in admin leader developer qa-engineer ; do htpasswd -B -b cluster-users $i review; don
+   93  cat cluster-users 
+   94  tail  oauth.yaml 
+   95  vim oauth.yaml 
+   96  oc replace -f oauth.yaml 
+   97  oc apply  -f oauth.yaml 
+   98  oc get oauth cluster -o yaml > oauth2.yaml
+   99  vim oauth2.yaml
+  100  oc replace -f oauth2.yaml
+  101  oc login -u admin -p review https://api.ocp4.example.com:6443
+  102  ls
+  103  tail oauth2.yaml 
+  104  oc create secret generic compreview-users --from-file htpasswd=cluster-users -n openshift-config
+  105  oc get oauth cluster -o yaml > oauth2.yaml
+  106  vim oauth2.yaml 
+  107  oc replace -f oauth2.yaml 
+  108  oc adm policy add-cluster-role-to-user cluster-admin admin
+  109  oc login -u admin -p review https://api.ocp4.example.com:6443
+  110  oc login -u kubeadmin -p nIMBQ-ZoYZ5-UyS5D-oGTjF https://api.ocp4.example.com:6443
+  111  oc get rolebindings
+  112  oc login -u admin -p review https://api.ocp4.example.com:6443
+  113  for i in leaders developers qa; do oc adm groups new $i; done
+  114  oc get groups.user.openshift.io 
+  115  oc adm groups add-users leader leaders
+  116  oc adm groups add-users leaders leader
+  117  oc get groups
+  118  oc adm groups add-users developers developer
+  119  oc adm groups add-users qa-engineer qa
+  120  oc adm groups add-users qa qa-engineer 
+  121  oc get groups.user.openshift.io 
+  122  oc adm policy add-cluster-role-to-group edit developers -n review-troubleshoot 
+  123  oc get groups.user.openshift.io 
+  124  oc get roles.authorization.openshift.io 
+  125  oc get roles.rbac.authorization.k8s.io 
+  126  oc get rolebindings.rbac.authorization.k8s.io 
+  127  oc get rolebindings.authorization.openshift.io 
+  128  oc adm policy add-role-to-group  edit developers -n review-troubleshoot 
+  129  oc adm policy add-cluster-role-to-group self-provisioner leaders
+  130  oc adm policy remove-cluster-role-from-group self-provisioner system:authenticated:oauth
+  131  oc adm policy add-role-to-group view qa -n review-troubleshoot 
+  132  oc get groups.user.openshift.io 
+  133  oc login -u developer -p review https://api.ocp4.example.com:6443
+  134  oc get pods
+  135  oc new-app --name mysql --docker-image  registry.access.redhat.com/rhscl/mysql-57-rhel7:5.7 
+  136  oc get pods
+  137  oc whoam i
+  138  oc whoami
+  139  oc whoami -t
+  140  oc get pods
+  141  oc detele svc mysql
+  142  oc detele service  mysql
+  143  oc delete service  mysql
+  144  oc delete dc   mysql
+  145  oc delete bc  mysql
+  146  oc delete pods mysql-f886f875c-wn4r2 
+  147  oc delete deployments.apps mysql
+  148  oc get pods
+  149  oc new-app --name mysql --docker-image  registry.access.redhat.com/rhscl/mysql-57-rhel7:5.7 
+  150  oc get pods
+  151  oc get events
+  152  oc get events | lllllless
+  153  oc get events | less
+  154  oc delete deployments.apps mysql
+  155  oc delete service  mysql
+  156  oc get pods
+  157  oc new-app --name mysql --docker-image  registry.access.redhat.com/rhscl/mysql-57-rhel7:5.7 
+  158  oc get pods
+  159  oc create secret generic mysql --from-literal password=redhat123
+  160  oc set env deployment mysql --prefix MYSQL_ROOT_ --from secret/mysql
+  161  oc get pods
+  162  oc set volumes deployment mysql --name mysql-storage --add --type pvc --claim-size   2Gi --claim-mode rwo --mount-path /var/lib/mysql/data
+  163  oc get pods
+  164  oc get pods -l deployment mysql
+  165  oc get pods -l deployment=mysql
+  166  oc get pods
+  167  oc get pvc
+  168  oc exec mysql-8647d768fd-pjzs7 -- df -h
+  169  oc new-app --name wordpress --docker-image docker.io/library/wordpress:5.3.0 -e WORDPRESS_DB_HOST=mysql -e WORDPRESS_DB_USER=root -e WORDPRESS_DB_NAME=wordpress
+  170  oc get pods
+  171  oc set env deployment/wordress 
+  172  oc get deployment
+  173  oc set env deployment/wordress --prefix WORDPRESS_DB_ --from secret/mysql
+  174  oc set env deployment/wordpress --prefix WORDPRESS_DB_ --from secret/mysql
+  175  oc get evenst
+  176  oc get events
+  177  oc create serviceaccount wordpress-sa
+  178  oc login -u admin -p review https://api.ocp4.example.com:6443
+  179  oc adm  policy add-scc-to-user anyuid -z wordpress-sa
+  180  oc get sa
+  181  oc login -u developer -p review https://api.ocp4.example.com:6443
+  182  oc set serviceaccount deployment/wordpress wordpress-sa
+  183  oc ggggggggget service
+  184  oc get svc
+  185  oc expose service wordpress --hostname wordpress.apps.ocp4.example.com
+  186  oc get route
+  187  curl  wordpress.apps.ocp4.example.com
+  188  vim DO280/labs/review-troubleshoot/deploy_famous-quotes.sh 
+  189  ll DO280/labs/review-troubleshoot/deploy_famous-quotes.sh
+  190  ./DO280/labs/review-troubleshoot/deploy_famous-quotes.sh
+  191  oc get pods
+  192  oc describe pods famous-quotes-1-deploy 
+  193  oc get nodes 
+  194  oc get svc
+  195  oc delete service famous-quotes 
+  196  oc delete dc famous-quotes 
+  197  oc delete bc  famous-quotes 
+  198  oc delete route   famous-quotes 
+  199  oc delete deployment    famous-quotes 
+  200  oc delete pods famous-quotes
+  201  oc get pods
+  202  ./DO280/labs/review-troubleshoot/deploy_famous-quotes.sh
+  203  oc get pods
+  204  oc get dc/famous-quotes -o yaml > famous-dc.yaml
+  205  vim famous-dc.yaml 
+  206  oc get pods
+  207  oc delete pods famous-quotes-1-b92zz 
+  208  oc get pods
+  209  oc replace -f famous-dc.yaml 
+  210  oc get dc/famous-quotes -o yaml > famous-dc.yaml
+  211  vim famous-dc.yaml
+  212  oc replace -f famous-dc.yaml 
+  213  oc get    pods
+  214  oc get pods -o wwide
+  215  oc get pods -o wide
+  216  oc get pods 
+  217  oc get pods
+  218  oc delete pods famous-quotes-1-deploy 
+  219  oc delete pods famous-quotes-2-5gxgw 
+  220  oc get pods
+  221  oc label nodes --all env-
+  222  oc label nodes --all -L env
+  223  oc get nodes -L   env
+  224  oc get svc
+  225  oc expose service famous-quotes --hostname quotes.apps.ocp4.example.com
+  226  oc get routes.route.openshift.io 
+  227  lab review-troubleshoot grade
+  228  cp ./DO280/labs/review-troubleshoot/deploy_famous-quotes.sh ex280/ex280/
+  229  ll  /var/lib/mysql
+  230  ll /usr/local/etc/
+  231  vim  /usr/local/etc/ocp4.defaults 
+  232  vim  /usr/local/etc/ocp4.config 
+  233  cp -rp  /usr/local/etc/ ex280/ex280/
+  234  cd ex280/ex280/
+  235  ll
+  236  history 
+  237  history >> command.txt 
